@@ -20,7 +20,7 @@ const Hint = ({
   //   fullWidth,
 }) => {
   const [close, setClose] = React.useState(false);
-  typeof label !== "string" && new Error("Type of label must be string");
+  // typeof label !== "string" && new Error("Type of label must be string");
   const motionVariant = {
     hidden: {
       opacity: 0,
@@ -45,7 +45,9 @@ const Hint = ({
             // style={{ width: fullWidth && "100%" }}
             initial="hidden"
             animate="visible"
-            variants={isAnimated ? motionVariant : null}
+            variants={
+              isAnimated ? motionVariant : { visible: { opacity: 1, x: 0 } }
+            }
             className={`${
               type === "success"
                 ? classes.success

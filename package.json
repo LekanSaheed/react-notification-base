@@ -1,6 +1,6 @@
 {
   "name": "react-notification-base",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "main": "dist/index",
   "description": "A simple customizable notification component",
@@ -10,6 +10,7 @@
     "component",
     "javascript"
   ],
+  "homepage": "https://github.com/lekansaheed/react-notification-base",
   "babel": {
     "presets": [
       "@babel/preset-react"
