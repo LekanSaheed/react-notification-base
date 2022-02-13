@@ -10,7 +10,6 @@
     "component",
     "javascript"
   ],
-  "homepage": "https://github.com/lekansaheed/react-notification-base",
   "babel": {
     "presets": [
       "@babel/preset-react"

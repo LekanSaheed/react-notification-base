@@ -34,9 +34,9 @@ const Hint = _ref => {
 
   } = _ref;
 
-  const [close, setClose] = _react.default.useState(false);
+  const [close, setClose] = _react.default.useState(false); // typeof label !== "string" && new Error("Type of label must be string");
 
-  typeof label !== "string" && new Error("Type of label must be string");
+
   const motionVariant = {
     hidden: {
       opacity: 0,
@@ -54,7 +54,12 @@ const Hint = _ref => {
     // style={{ width: fullWidth && "100%" }}
     initial: "hidden",
     animate: "visible",
-    variants: isAnimated ? motionVariant : null,
+    variants: isAnimated ? motionVariant : {
+      visible: {
+        opacity: 1,
+        x: 0
+      }
+    },
     className: "".concat(type === "success" ? _HintModule.default.success : type === "error" ? _HintModule.default.error : type === "warning" ? _HintModule.default.warning : _HintModule.default.info, " ").concat(_HintModule.default.container),
     exit: "hidden"
   }, /*#__PURE__*/_react.default.createElement("div", {
